@@ -1,0 +1,40 @@
+﻿@model IEnumerable<EquipmentLibrary.Model.User>
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["SuccessMessage"]
+    </div>
+}
+
+
+<h2>User Management</h2>
+
+<a class="btn btn-primary mb-3" asp-action="Create">Create New User</a>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Role</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td>@user.Name</td>
+                <td>@user.Email</td>
+                <td>@user.Role</td>
+                <td>
+                    <a class="btn btn-sm btn-warning" asp-action="Edit" asp-route-id="@user.Id">Edit</a>
+                    <form asp-action="Delete" asp-route-id="@user.Id" method="post" style="display:inline;" onsubmit="return confirm('Are you sure you want to delete this user?');">
+                        <button class="btn btn-sm btn-danger" type="submit">Delete</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

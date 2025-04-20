@@ -1,0 +1,45 @@
+@model IEnumerable<EquipmentLibrary.Model.Equipment>
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["SuccessMessage"]
+    </div>
+}
+
+<h2>Equipment Management</h2>
+
+<a class="btn btn-primary mb-3" asp-action="Create">Add New Equipment</a>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Description</th>
+            <th>Rental Price</th>
+            <th>Availability</th>
+            <th>Condition</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var equipment in Model)
+        {
+            <tr>
+                <td>@equipment.Name</td>
+                <td>@equipment.Category?.Name</td>
+                <td>@(equipment.Description?.Length > 50 ? equipment.Description.Substring(0, 47) + "..." : equipment.Description)</td>
+                <td>@equipment.RentalPrice.ToString("C")</td>
+                <td>@equipment.AvailabilityStatus</td>
+                <td>@equipment.ConditionStatus</td>
+                <td>
+                    <a class="btn btn-sm btn-warning" asp-action="Edit" asp-route-id="@equipment.Id">Edit</a>
+                    <form asp-action="Delete" asp-route-id="@equipment.Id" method="post" style="display:inline;" onsubmit="return confirm('Are you sure you want to delete this equipment?');">
+                        <button class="btn btn-sm btn-danger" type="submit">Delete</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table> 

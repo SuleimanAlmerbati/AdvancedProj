@@ -1,0 +1,57 @@
+﻿@model IEnumerable<EquipmentLibrary.Model.RentalRequest>
+
+<h2>Rental Requests</h2>
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success">@TempData["SuccessMessage"]</div>
+}
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Customer</th>
+            <th>Equipment</th>
+            <th>Start Date</th>
+            <th>Return Date</th>
+            <th>Total Cost</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var req in Model)
+        {
+            <tr>
+                <td>@req.User.Name</td>
+                <td>@req.Equipment.Name</td>
+                <td>@req.RentalStartDate.ToShortDateString()</td>
+                <td>@req.ReturnDate.ToShortDateString()</td>
+                <td>@req.TotalCost.ToString("C")</td>
+                <td>
+                    <span class="badge
+                        @(req.Status == "Approved" ? "bg-success" :
+                          req.Status == "Rejected" ? "bg-danger" : "bg-warning text-dark")">
+                        @req.Status
+                    </span>
+                </td>
+                <td>
+                    @if (req.Status.ToLower() == "pending")
+                    {
+                        <form asp-action="Approve" asp-route-id="@req.Id" method="post" class="d-inline">
+                            <button class="btn btn-sm btn-success">Approve</button>
+                        </form>
+
+                        <form asp-action="Reject" asp-route-id="@req.Id" method="post" class="d-inline">
+                            <button class="btn btn-sm btn-danger">Reject</button>
+                        </form>
+                    }
+                    else
+                    {
+                        <span class="text-muted">No actions</span>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

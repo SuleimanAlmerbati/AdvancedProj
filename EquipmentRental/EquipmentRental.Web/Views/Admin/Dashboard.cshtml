@@ -1,0 +1,64 @@
+﻿@{
+    ViewData["Title"] = "Admin Dashboard";
+}
+
+<h2 class="mb-4">Welcome, Admin @ViewBag.AdminName</h2>
+
+<!-- STATS: Users, Equipment, Categories -->
+<div class="row mb-4">
+    <div class="col-md-4">
+        <div class="card text-white bg-primary mb-3 shadow">
+            <div class="card-body">
+                <h5 class="card-title">Total Users</h5>
+                <p class="display-6">@ViewBag.TotalUsers</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card text-white bg-secondary mb-3 shadow">
+            <div class="card-body">
+                <h5 class="card-title">Total Equipment</h5>
+                <p class="display-6">@ViewBag.TotalEquipment</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card text-white bg-dark mb-3 shadow">
+            <div class="card-body">
+                <h5 class="card-title">Total Categories</h5>
+                <p class="display-6">@ViewBag.TotalCategories</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- USERS BY ROLE -->
+<div class="card bg-light border mb-4 shadow">
+    <div class="card-body">
+        <h5 class="card-title">Users by Role</h5>
+        <span class="badge bg-dark me-2">Admins: @ViewBag.AdminCount</span>
+        <span class="badge bg-info me-2 text-dark">Managers: @ViewBag.ManagerCount</span>
+        <span class="badge bg-success">Customers: @ViewBag.CustomerCount</span>
+    </div>
+</div>
+
+<!-- EQUIPMENT BY STATUS -->
+<div class="card bg-light border mb-4 shadow">
+    <div class="card-body">
+        <h5 class="card-title">Equipment by Status</h5>
+        <span class="badge bg-success me-2">Available: @ViewBag.AvailableCount</span>
+        <span class="badge bg-warning text-dark me-2">Rented: @ViewBag.RentedCount</span>
+        <span class="badge bg-info text-dark me-2">Maintenance: @ViewBag.MaintenanceCount</span>
+        <span class="badge bg-danger">Unavailable: @ViewBag.UnavailableCount</span>
+    </div>
+</div>
+
+<!-- QUICK ACCESS LINKS -->
+<h4 class="mt-4">Quick Access</h4>
+<div class="d-flex flex-wrap gap-2 mb-5">
+    <a href="/Users" class="btn btn-outline-primary">Manage Users</a>
+    <a href="/Categories" class="btn btn-outline-success">Manage Categories</a>
+    <a href="/Equipment" class="btn btn-outline-warning">Manage Equipment</a>
+</div>

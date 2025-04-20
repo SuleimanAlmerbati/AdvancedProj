@@ -1,0 +1,72 @@
+@model EquipmentLibrary.Model.Equipment
+
+<h2>Add New Equipment</h2>
+
+@if (TempData["DebugInfo"] != null)
+{
+    <div class="alert alert-info">
+        <h4>Debug Information</h4>
+        @Html.Raw(TempData["DebugInfo"])
+    </div>
+}
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label asp-for="Name">Name</label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="CategoryId">Category</label>
+        <select asp-for="CategoryId" asp-items="ViewBag.Categories" class="form-control">
+            <option value="">-- Select Category --</option>
+        </select>
+        <span asp-validation-for="CategoryId" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Description">Description</label>
+        <textarea asp-for="Description" class="form-control" rows="3"></textarea>
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="RentalPrice">Rental Price</label>
+        <input asp-for="RentalPrice" class="form-control" type="number" step="0.01" min="0" />
+        <span asp-validation-for="RentalPrice" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="AvailabilityStatus">Availability Status</label>
+        <select asp-for="AvailabilityStatus" class="form-control">
+            <option value="">-- Select Status --</option>
+            <option value="Available">Available</option>
+            <option value="Rented">Rented</option>
+            <option value="Maintenance">Maintenance</option>
+            <option value="Unavailable">Unavailable</option>
+        </select>
+        <span asp-validation-for="AvailabilityStatus" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="ConditionStatus">Condition Status</label>
+        <select asp-for="ConditionStatus" class="form-control">
+            <option value="">-- Select Status --</option>
+            <option value="New">New</option>
+            <option value="Good">Good</option>
+            <option value="Fair">Fair</option>
+            <option value="Poor">Poor</option>
+        </select>
+        <span asp-validation-for="ConditionStatus" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mt-3">
+        <button type="submit" class="btn btn-primary">Create</button>
+        <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+    </div>
+</form>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+} 

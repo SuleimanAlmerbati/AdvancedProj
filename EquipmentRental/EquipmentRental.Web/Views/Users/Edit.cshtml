@@ -1,0 +1,65 @@
+﻿@model EquipmentLibrary.Model.UserEditViewModel
+@{
+    // Remove the "required" client-side validation for PasswordHash
+    ViewData.ModelState["PasswordHash"]?.Errors.Clear();
+}
+
+<h2>Update User (@Model.Name)</h2>
+
+@if (!ViewData.ModelState.IsValid)
+{
+    <div class="alert alert-danger">
+        <div asp-validation-summary="All" class="text-danger"></div>
+    </div>
+}
+
+<form asp-action="Edit" asp-controller="Users" method="post">
+    <input type="hidden" asp-for="Id" />
+
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Email"></label>
+        <input asp-for="Email" class="form-control" type="email" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="PasswordHash">New Password (optional - leave blank to keep current)</label>
+        <input asp-for="PasswordHash" class="form-control" type="password" autocomplete="off" />
+        <span asp-validation-for="PasswordHash" class="text-danger"></span>
+        <small class="form-text text-muted">
+            If you enter a new password, it must be strong (8+ characters, uppercase, lowercase, number, special character) 
+            and different from your current password.
+        </small>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Role"></label>
+        <select asp-for="Role" class="form-control">
+            <option value="Admin">Admin</option>
+            <option value="Manager">Manager</option>
+            <option value="Customer">Customer</option>
+        </select>
+        <span asp-validation-for="Role" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Update</button>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script>
+        $(document).ready(function () {
+            $('form').on('submit', function () {
+                console.log('Form submitted');
+            });
+        });
+    </script>
+}

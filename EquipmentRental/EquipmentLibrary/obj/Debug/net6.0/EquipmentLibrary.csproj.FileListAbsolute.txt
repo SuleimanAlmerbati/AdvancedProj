@@ -1,0 +1,14 @@
+F:\Advanced\EquipmentRental\EquipmentLibrary\bin\Debug\net6.0\EquipmentLibrary.deps.json
+F:\Advanced\EquipmentRental\EquipmentLibrary\bin\Debug\net6.0\EquipmentLibrary.runtimeconfig.json
+F:\Advanced\EquipmentRental\EquipmentLibrary\bin\Debug\net6.0\EquipmentLibrary.dll
+F:\Advanced\EquipmentRental\EquipmentLibrary\bin\Debug\net6.0\EquipmentLibrary.pdb
+F:\Advanced\EquipmentRental\EquipmentLibrary\obj\Debug\net6.0\EquipmentLibrary.csproj.AssemblyReference.cache
+F:\Advanced\EquipmentRental\EquipmentLibrary\obj\Debug\net6.0\EquipmentLibrary.GeneratedMSBuildEditorConfig.editorconfig
+F:\Advanced\EquipmentRental\EquipmentLibrary\obj\Debug\net6.0\EquipmentLibrary.AssemblyInfoInputs.cache
+F:\Advanced\EquipmentRental\EquipmentLibrary\obj\Debug\net6.0\EquipmentLibrary.AssemblyInfo.cs
+F:\Advanced\EquipmentRental\EquipmentLibrary\obj\Debug\net6.0\EquipmentLibrary.csproj.CoreCompileInputs.cache
+F:\Advanced\EquipmentRental\EquipmentLibrary\obj\Debug\net6.0\EquipmentLibrary.dll
+F:\Advanced\EquipmentRental\EquipmentLibrary\obj\Debug\net6.0\refint\EquipmentLibrary.dll
+F:\Advanced\EquipmentRental\EquipmentLibrary\obj\Debug\net6.0\EquipmentLibrary.pdb
+F:\Advanced\EquipmentRental\EquipmentLibrary\obj\Debug\net6.0\EquipmentLibrary.genruntimeconfig.cache
+F:\Advanced\EquipmentRental\EquipmentLibrary\obj\Debug\net6.0\ref\EquipmentLibrary.dll
