@@ -1,0 +1,121 @@
+@model IEnumerable<EquipmentRental.Web.Models.RentalTransactionViewModel>
+@{
+    ViewData["Title"] = "Rentals List";
+    var currentFilter = ViewBag.CurrentFilter as string ?? "all";
+}
+
+<div class="container">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2>Rentals List</h2>
+        <div class="btn-group">
+            <a asp-action="Index" asp-route-status="all" 
+               class="btn @(currentFilter == "all" ? "btn-primary" : "btn-outline-primary")">All</a>
+            <a asp-action="Index" asp-route-status="active" 
+               class="btn @(currentFilter == "active" ? "btn-primary" : "btn-outline-primary")">Active</a>
+            <a asp-action="Index" asp-route-status="returned" 
+               class="btn @(currentFilter == "returned" ? "btn-primary" : "btn-outline-primary")">Returned</a>
+            <a asp-action="Index" asp-route-status="pending" 
+               class="btn @(currentFilter == "pending" ? "btn-primary" : "btn-outline-primary")">Pending Payment</a>
+            <a asp-action="Index" asp-route-status="paid" 
+               class="btn @(currentFilter == "paid" ? "btn-primary" : "btn-outline-primary")">Paid</a>
+        </div>
+    </div>
+
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            @TempData["SuccessMessage"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+
+    <div class="table-responsive">
+        <table class="table table-striped table-hover">
+            <thead class="table-dark">
+                <tr>
+                    <th>Rental ID</th>
+                    <th>Customer</th>
+                    <th>Equipment</th>
+                    <th>Start Date</th>
+                    <th>Expected Return</th>
+                    <th>Actual Return</th>
+                    <th>Rental Fee</th>
+                    <th>Payment Status</th>
+                    <th>Return Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model.Any())
+                {
+                    @foreach (var rental in Model)
+                    {
+                        <tr>
+                            <td>@rental.Id</td>
+                            <td>@rental.CustomerName</td>
+                            <td>@rental.EquipmentName</td>
+                            <td>@rental.ActualRentalStart.ToString("MM/dd/yyyy")</td>
+                            <td>@rental.ExpectedReturnDate.ToString("MM/dd/yyyy")</td>
+                            <td>
+                                @if (rental.ActualReturnDate.HasValue)
+                                {
+                                    @rental.ActualReturnDate.Value.ToString("MM/dd/yyyy")
+                                }
+                                else
+                                {
+                                    <span class="text-muted">-</span>
+                                }
+                            </td>
+                            <td>@rental.RentalFee.ToString("C")</td>
+                            <td>
+                                <span class="badge @(rental.PaymentStatus.ToLower() == "paid" ? "bg-success" : "bg-warning")">
+                                    @rental.PaymentStatus
+                                </span>
+                            </td>
+                            <td>
+                                @if (rental.IsReturned)
+                                {
+                                    <span class="badge bg-success">Returned</span>
+                                }
+                                else
+                                {
+                                    <span class="badge bg-info">Active</span>
+                                }
+                            </td>
+                            <td>
+                                <div class="d-flex gap-2">
+                                    <a asp-action="Details" asp-route-id="@rental.Id" class="btn btn-sm btn-outline-info" title="View Details">
+                                        <i class="bi bi-eye-fill"></i> View
+                                    </a>
+                                    @if (!rental.IsReturned)
+                                    {
+                                        <a asp-action="ProcessReturn" asp-route-id="@rental.Id" class="btn btn-sm btn-outline-primary" title="Process Return">
+                                            <i class="bi bi-box-arrow-in-right"></i> Return
+                                        </a>
+                                    }
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <tr>
+                        <td colspan="10" class="text-center">No rentals found.</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            // Auto-dismiss alerts after 5 seconds
+            setTimeout(function() {
+                $('.alert').alert('close');
+            }, 5000);
+        });
+    </script>
+} 

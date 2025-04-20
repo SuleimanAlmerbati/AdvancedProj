@@ -52,7 +52,7 @@
                                     <a class="nav-link text-dark" asp-controller="Equipment" asp-action="Index">Equipment</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-controller="Admin" asp-action="Logs">Logs</a>
+                                    <a class="nav-link text-dark" asp-controller="Log" asp-action="Index">Logs</a>
                                 </li>
                                 <li class="nav-item">
                                     <span class="nav-link text-success">Welcome Admin @name!</span>
@@ -61,7 +61,7 @@
                             else if (role == "manager")
                             {
                                 <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-controller="Manager" asp-action="Panel">Dashboard</a>
+                                    <a class="nav-link text-dark" asp-controller="ManagerDashboard" asp-action="Index">Dashboard</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link text-dark" asp-controller="RentalRequests" asp-action="Index">Rental Requests</a>

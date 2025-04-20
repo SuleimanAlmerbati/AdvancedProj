@@ -5,6 +5,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
 using System.Text.Json;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using EquipmentRental.Web.Models;
 
 namespace EquipmentRental.Web.Controllers
 {
@@ -163,6 +164,26 @@ namespace EquipmentRental.Web.Controllers
             _logger.LogInformation($"Equipment '{equipment.Name}' deleted successfully.");
             TempData["SuccessMessage"] = $"Equipment '{equipment.Name}' deleted successfully.";
             return RedirectToAction("Index");
+        }
+
+        public async Task<IActionResult> Browse()
+        {
+            var equipment = await _context.Equipment
+                .Include(e => e.Category)
+                .Where(e => e.AvailabilityStatus == "Available")
+                .Select(e => new EquipmentViewModel
+                {
+                    Id = e.Id,
+                    Name = e.Name,
+                    Description = e.Description,
+                    CategoryName = e.Category.Name,
+                    RentalPrice = e.RentalPrice,
+                    Condition = e.ConditionStatus,
+                    //ImageUrl = e.ImagePath
+                })
+                .ToListAsync();
+
+            return View(equipment);
         }
     }
 } 
