@@ -9,10 +9,5 @@ namespace EquipmentRental.Web.Controllers
             return View();
         }
 
-        public IActionResult IDasndex()
-        {
-            return View();
-        }
-
     }
 }
