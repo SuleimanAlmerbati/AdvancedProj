@@ -1,6 +1,7 @@
 using EquipmentLibrary; // If your namespace is different, adjust it
 using EquipmentLibrary.Model;
 using Microsoft.EntityFrameworkCore;
+using EquipmentRental.Web.Services;
 using System;
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,6 +13,7 @@ builder.Services.AddDbContext<CourseDBContext>(options =>
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddSession();
+builder.Services.AddScoped<LoggingService>();
 
 var app = builder.Build();
 

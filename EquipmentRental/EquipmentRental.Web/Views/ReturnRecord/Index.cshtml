@@ -1,0 +1,77 @@
+@model IEnumerable<EquipmentRental.Web.Models.ReturnRecordViewModel>
+@{
+    ViewData["Title"] = "Return Records";
+    var currentFilter = ViewBag.CurrentFilter as string ?? "all";
+}
+
+<div class="container">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2>Return Records</h2>
+        <div class="btn-group">
+            <a asp-action="Index" asp-route-condition="all" 
+               class="btn @(currentFilter == "all" ? "btn-primary" : "btn-outline-primary")">All</a>
+            <a asp-action="Index" asp-route-condition="excellent" 
+               class="btn @(currentFilter == "excellent" ? "btn-primary" : "btn-outline-primary")">Excellent</a>
+            <a asp-action="Index" asp-route-condition="good" 
+               class="btn @(currentFilter == "good" ? "btn-primary" : "btn-outline-primary")">Good</a>
+            <a asp-action="Index" asp-route-condition="fair" 
+               class="btn @(currentFilter == "fair" ? "btn-primary" : "btn-outline-primary")">Fair</a>
+            <a asp-action="Index" asp-route-condition="poor" 
+               class="btn @(currentFilter == "poor" ? "btn-primary" : "btn-outline-primary")">Poor</a>
+            <a asp-action="Index" asp-route-condition="damaged" 
+               class="btn @(currentFilter == "damaged" ? "btn-primary" : "btn-outline-primary")">Damaged</a>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped table-hover">
+            <thead class="table-dark">
+                <tr>
+                    <th>Rental ID</th>
+                    <th>Rental Period</th>
+                    <th>Return Condition</th>
+                    <th>Total Charges</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model.Any())
+                {
+                    @foreach (var record in Model)
+                    {
+                        <tr>
+                            <td>@record.RentalTransactionId</td>
+                            <td>
+                                <div>@record.RentalStartDate.ToString("MM/dd/yyyy") - @record.ExpectedReturnDate.ToString("MM/dd/yyyy")</div>
+                                <small class="text-muted">Returned: @record.ActualReturnDate.ToString("MM/dd/yyyy")</small>
+                            </td>
+                            <td>
+                                <span class="badge @(record.ReturnCondition.ToLower() == "excellent" ? "bg-success" : 
+                                                   record.ReturnCondition.ToLower() == "good" ? "bg-info" : 
+                                                   record.ReturnCondition.ToLower() == "fair" ? "bg-warning" : "bg-danger")">
+                                    @record.ReturnCondition
+                                </span>
+                            </td>
+                            <td>@record.TotalCharges.ToString("C")</td>
+                            <td>
+                                <div class="d-flex gap-2">
+                                    <a asp-controller="RentalTransaction" asp-action="Details" 
+                                       asp-route-id="@record.RentalTransactionId" 
+                                       class="btn btn-sm btn-outline-info" title="View Details">
+                                        <i class="bi bi-eye-fill"></i> View
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <tr>
+                        <td colspan="5" class="text-center">No return records found.</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div> 

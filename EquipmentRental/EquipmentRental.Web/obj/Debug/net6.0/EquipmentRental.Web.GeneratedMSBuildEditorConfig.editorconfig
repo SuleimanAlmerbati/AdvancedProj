@@ -42,6 +42,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/PC/OneDrive/Documents/GitHub/AdvancedProj/EquipmentRental/EquipmentRental.Web/Views/Equipment/Browse.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXF1aXBtZW50XEJyb3dzZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/PC/OneDrive/Documents/GitHub/AdvancedProj/EquipmentRental/EquipmentRental.Web/Views/Equipment/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXF1aXBtZW50XENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -62,8 +66,36 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/PC/OneDrive/Documents/GitHub/AdvancedProj/EquipmentRental/EquipmentRental.Web/Views/Log/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9nXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/PC/OneDrive/Documents/GitHub/AdvancedProj/EquipmentRental/EquipmentRental.Web/Views/ManagerDashboard/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlckRhc2hib2FyZFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/PC/OneDrive/Documents/GitHub/AdvancedProj/EquipmentRental/EquipmentRental.Web/Views/RentalRequests/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVudGFsUmVxdWVzdHNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/PC/OneDrive/Documents/GitHub/AdvancedProj/EquipmentRental/EquipmentRental.Web/Views/RentalTransaction/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVudGFsVHJhbnNhY3Rpb25cRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/PC/OneDrive/Documents/GitHub/AdvancedProj/EquipmentRental/EquipmentRental.Web/Views/RentalTransaction/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVudGFsVHJhbnNhY3Rpb25cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/PC/OneDrive/Documents/GitHub/AdvancedProj/EquipmentRental/EquipmentRental.Web/Views/RentalTransaction/ProcessReturn.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVudGFsVHJhbnNhY3Rpb25cUHJvY2Vzc1JldHVybi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/PC/OneDrive/Documents/GitHub/AdvancedProj/EquipmentRental/EquipmentRental.Web/Views/ReturnRecord/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmV0dXJuUmVjb3JkXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/PC/OneDrive/Documents/GitHub/AdvancedProj/EquipmentRental/EquipmentRental.Web/Views/ReturnRecord/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmV0dXJuUmVjb3JkXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/PC/OneDrive/Documents/GitHub/AdvancedProj/EquipmentRental/EquipmentRental.Web/Views/Shared/Error.cshtml]

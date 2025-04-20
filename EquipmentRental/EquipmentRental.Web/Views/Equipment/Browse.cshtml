@@ -1,0 +1,70 @@
+@model IEnumerable<EquipmentRental.Web.Models.EquipmentViewModel>
+
+@{
+    ViewData["Title"] = "Browse Equipment";
+}
+
+<div class="container mt-4">
+    <h1 class="mb-4">Available Equipment</h1>
+
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            @TempData["SuccessMessage"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        @foreach (var item in Model)
+        {
+            <div class="col">
+                <div class="card h-100">
+                    @if (!string.IsNullOrEmpty(item.ImageUrl))
+                    {
+                        <img src="@item.ImageUrl" class="card-img-top" alt="@item.Name" style="height: 200px; object-fit: cover;">
+                    }
+                    else
+                    {
+                        <div class="card-img-top bg-light d-flex align-items-center justify-content-center" style="height: 200px;">
+                            <i class="fas fa-tools fa-3x text-secondary"></i>
+                        </div>
+                    }
+                    <div class="card-body">
+                        <h5 class="card-title">@item.Name</h5>
+                        <p class="card-text text-muted">@item.CategoryName</p>
+                        <p class="card-text">@item.Description</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="badge @item.GetConditionBadgeClass()">@item.Condition</span>
+                            <span class="text-primary fw-bold">$@item.RentalPrice.ToString("F2")/day</span>
+                        </div>
+                    </div>
+                    <div class="card-footer bg-transparent">
+                        <a asp-controller="RentalRequests" asp-action="Create" asp-route-equipmentId="@item.Id" 
+                           class="btn btn-primary w-100">
+                            <i class="fas fa-cart-plus me-2"></i>Request Rental
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+    @if (!Model.Any())
+    {
+        <div class="alert alert-info">
+            No equipment available at the moment.
+        </div>
+    }
+</div>
+
+@section Scripts {
+    <script>
+        // Auto-dismiss alerts after 5 seconds
+        window.setTimeout(function() {
+            $(".alert").fadeTo(500, 0).slideUp(500, function(){
+                $(this).remove(); 
+            });
+        }, 5000);
+    </script>
+} 
