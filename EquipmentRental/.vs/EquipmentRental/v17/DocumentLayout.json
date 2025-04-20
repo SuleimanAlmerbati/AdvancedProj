@@ -156,7 +156,7 @@
               "RelativeDocumentMoniker": "EquipmentRental.Web\\Controllers\\ManagerDashboardController.cs",
               "ToolTip": "C:\\Users\\PC\\OneDrive\\Documents\\GitHub\\AdvancedProj\\EquipmentRental\\EquipmentRental.Web\\Controllers\\ManagerDashboardController.cs",
               "RelativeToolTip": "EquipmentRental.Web\\Controllers\\ManagerDashboardController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAaAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-20T10:54:27.46Z",
               "EditorCaption": ""
@@ -171,8 +171,7 @@
               "RelativeToolTip": "EquipmentRental.Web\\Controllers\\RentalRequestsController.cs",
               "ViewState": "AQIAACEAAAAAAAAAAAAkwCkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-20T10:44:58.281Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-20T10:44:58.281Z"
             },
             {
               "$type": "Document",
