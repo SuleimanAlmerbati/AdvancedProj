@@ -9,5 +9,9 @@ namespace EquipmentRental.Web.Controllers
             return View();
         }
 
+        public IActionResult TestMethod()
+        {
+            return Content("This is a test method from ManagerDashboardController");
+        }
     }
 }
