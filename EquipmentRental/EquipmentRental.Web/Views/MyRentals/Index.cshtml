@@ -1,0 +1,115 @@
+@model IEnumerable<EquipmentRental.Web.Models.MyRentalsViewModel>
+
+@{
+    ViewData["Title"] = "My Rentals";
+}
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="text-center">My Rental Requests</h2>
+                </div>
+                <div class="card-body">
+                    @if (TempData["SuccessMessage"] != null)
+                    {
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            @TempData["SuccessMessage"]
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    }
+
+                    <div class="mb-4">
+                        <div class="btn-group" role="group">
+                            <a asp-action="Index" asp-route-status="all" 
+                               class="btn @(ViewBag.CurrentFilter == "all" ? "btn-primary" : "btn-outline-primary")">
+                                All
+                            </a>
+                            <a asp-action="Index" asp-route-status="Pending" 
+                               class="btn @(ViewBag.CurrentFilter == "Pending" ? "btn-primary" : "btn-outline-primary")">
+                                Pending
+                            </a>
+                            <a asp-action="Index" asp-route-status="Approved" 
+                               class="btn @(ViewBag.CurrentFilter == "Approved" ? "btn-primary" : "btn-outline-primary")">
+                                Approved
+                            </a>
+                            <a asp-action="Index" asp-route-status="Rejected" 
+                               class="btn @(ViewBag.CurrentFilter == "Rejected" ? "btn-primary" : "btn-outline-primary")">
+                                Rejected
+                            </a>
+                        </div>
+                    </div>
+
+                    @if (Model.Any())
+                    {
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Equipment</th>
+                                        <th>Start Date</th>
+                                        <th>Return Date</th>
+                                        <th>Total Cost</th>
+                                        <th>Status</th>
+                                        <th>Reason</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var rental in Model)
+                                    {
+                                        <tr>
+                                            <td>
+                                                <strong>@rental.EquipmentName</strong>
+                                                <br />
+                                                <small class="text-muted">@rental.EquipmentDescription</small>
+                                            </td>
+                                            <td>@rental.RentalStartDate.ToString("MMM dd, yyyy")</td>
+                                            <td>@rental.ReturnDate.ToString("MMM dd, yyyy")</td>
+                                            <td>$@rental.TotalCost.ToString("F2")</td>
+                                            <td>
+                                                @switch (rental.Status)
+                                                {
+                                                    case "Pending":
+                                                        <span class="badge bg-warning">@rental.Status</span>
+                                                        break;
+                                                    case "Approved":
+                                                        <span class="badge bg-success">@rental.Status</span>
+                                                        break;
+                                                    case "Rejected":
+                                                        <span class="badge bg-danger">@rental.Status</span>
+                                                        break;
+                                                    default:
+                                                        <span class="badge bg-secondary">@rental.Status</span>
+                                                        break;
+                                                }
+                                            </td>
+                                            <td>@rental.Reason</td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="alert alert-info">
+                            No rental requests found. <a asp-controller="Equipment" asp-action="Browse">Browse equipment</a> to make a request.
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        // Auto-dismiss alerts after 5 seconds
+        $(document).ready(function() {
+            setTimeout(function() {
+                $('.alert').alert('close');
+            }, 5000);
+        });
+    </script>
+} 

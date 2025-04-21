@@ -74,6 +74,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlckRhc2hib2FyZFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/PC/OneDrive/Documents/GitHub/AdvancedProj/EquipmentRental/EquipmentRental.Web/Views/MyRentals/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTXlSZW50YWxzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/PC/OneDrive/Documents/GitHub/AdvancedProj/EquipmentRental/EquipmentRental.Web/Views/RentalRequests/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVudGFsUmVxdWVzdHNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/PC/OneDrive/Documents/GitHub/AdvancedProj/EquipmentRental/EquipmentRental.Web/Views/RentalRequests/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVudGFsUmVxdWVzdHNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
