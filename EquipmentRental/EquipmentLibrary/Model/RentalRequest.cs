@@ -19,7 +19,9 @@ namespace EquipmentLibrary.Model
         [Column(TypeName = "decimal(18, 2)")]
         public decimal TotalCost { get; set; }
         [StringLength(50)]
-        public string Status { get; set; } = null!;
+        public string Status { get; set; } = "Pending";
+        [StringLength(500)]
+        public string Reason { get; set; }
 
         [ForeignKey("EquipmentId")]
         [InverseProperty("RentalRequests")]

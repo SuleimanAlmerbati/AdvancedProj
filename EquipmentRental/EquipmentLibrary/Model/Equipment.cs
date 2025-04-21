@@ -26,6 +26,11 @@ namespace EquipmentLibrary.Model
         public string AvailabilityStatus { get; set; } = null!;
         [StringLength(50)]
         public string ConditionStatus { get; set; } = null!;
+
+        [StringLength(255)]
+        public string? ImageUrl { get; set; }
+
+
         public int CategoryId { get; set; }
 
         [ForeignKey("CategoryId")]

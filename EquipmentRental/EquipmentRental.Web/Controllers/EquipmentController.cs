@@ -179,7 +179,7 @@ namespace EquipmentRental.Web.Controllers
                     CategoryName = e.Category.Name,
                     RentalPrice = e.RentalPrice,
                     Condition = e.ConditionStatus,
-                    //ImageUrl = e.ImagePath
+                    ImageUrl = e.ImageUrl
                 })
                 .ToListAsync();
 
