@@ -34,13 +34,13 @@
             btnSearch = new Button();
             btnEdit = new Button();
             dgvEquipmentList = new DataGridView();
-            courseDBContextBindingSource = new BindingSource(components);
             categoriesDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             equipmentDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             feedbacksDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             rentalRequestsDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             rentalTransactionsDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             returnRecordsDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            courseDBContextBindingSource = new BindingSource(components);
             ((System.ComponentModel.ISupportInitialize)dgvEquipmentList).BeginInit();
             ((System.ComponentModel.ISupportInitialize)courseDBContextBindingSource).BeginInit();
             SuspendLayout();
@@ -96,10 +96,7 @@
             dgvEquipmentList.RowTemplate.Height = 25;
             dgvEquipmentList.Size = new Size(645, 312);
             dgvEquipmentList.TabIndex = 4;
-            // 
-            // courseDBContextBindingSource
-            // 
-            courseDBContextBindingSource.DataSource = typeof(EquipmentLibrary.Model.CourseDBContext);
+            dgvEquipmentList.CellContentClick += dgvEquipmentList_CellContentClick;
             // 
             // categoriesDataGridViewTextBoxColumn
             // 
@@ -136,6 +133,10 @@
             returnRecordsDataGridViewTextBoxColumn.DataPropertyName = "ReturnRecords";
             returnRecordsDataGridViewTextBoxColumn.HeaderText = "ReturnRecords";
             returnRecordsDataGridViewTextBoxColumn.Name = "returnRecordsDataGridViewTextBoxColumn";
+            // 
+            // courseDBContextBindingSource
+            // 
+            courseDBContextBindingSource.DataSource = typeof(EquipmentLibrary.Model.CourseDBContext);
             // 
             // EquipmentInformation
             // 

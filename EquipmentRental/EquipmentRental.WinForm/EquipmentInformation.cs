@@ -126,5 +126,10 @@ namespace EquipmentRental.WinForm
                 MessageBox.Show("Please select a row to edit.", "Edit", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        private void dgvEquipmentList_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

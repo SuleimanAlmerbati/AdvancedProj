@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\essa8\\OneDrive\\\u0627\u0644\u0645\u0633\u062A\u0646\u062F\u0627\u062A\\Desktop\\advproj\\AdvancedProj\\EquipmentRental\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{757A4378-23D4-4679-857C-937CA7A137AA}|EquipmentRental.WinForm\\EquipmentRental.WinForm.csproj|c:\\users\\essa8\\onedrive\\\u0627\u0644\u0645\u0633\u062A\u0646\u062F\u0627\u062A\\desktop\\advproj\\advancedproj\\equipmentrental\\equipmentrental.winform\\equipmentinformation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{757A4378-23D4-4679-857C-937CA7A137AA}|EquipmentRental.WinForm\\EquipmentRental.WinForm.csproj|solutionrelative:equipmentrental.winform\\equipmentinformation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{757A4378-23D4-4679-857C-937CA7A137AA}|EquipmentRental.WinForm\\EquipmentRental.WinForm.csproj|c:\\users\\essa8\\onedrive\\\u0627\u0644\u0645\u0633\u062A\u0646\u062F\u0627\u062A\\desktop\\advproj\\advancedproj\\equipmentrental\\equipmentrental.winform\\equipmentinformation.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{757A4378-23D4-4679-857C-937CA7A137AA}|EquipmentRental.WinForm\\EquipmentRental.WinForm.csproj|solutionrelative:equipmentrental.winform\\equipmentinformation.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{757A4378-23D4-4679-857C-937CA7A137AA}|EquipmentRental.WinForm\\EquipmentRental.WinForm.csproj|c:\\users\\essa8\\onedrive\\\u0627\u0644\u0645\u0633\u062A\u0646\u062F\u0627\u062A\\desktop\\advproj\\advancedproj\\equipmentrental\\equipmentrental.winform\\equipmentinformation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{757A4378-23D4-4679-857C-937CA7A137AA}|EquipmentRental.WinForm\\EquipmentRental.WinForm.csproj|solutionrelative:equipmentrental.winform\\equipmentinformation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{757A4378-23D4-4679-857C-937CA7A137AA}|EquipmentRental.WinForm\\EquipmentRental.WinForm.csproj|c:\\users\\essa8\\onedrive\\\u0627\u0644\u0645\u0633\u062A\u0646\u062F\u0627\u062A\\desktop\\advproj\\advancedproj\\equipmentrental\\equipmentrental.winform\\equipmentinformation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{757A4378-23D4-4679-857C-937CA7A137AA}|EquipmentRental.WinForm\\EquipmentRental.WinForm.csproj|solutionrelative:equipmentrental.winform\\equipmentinformation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{757A4378-23D4-4679-857C-937CA7A137AA}|EquipmentRental.WinForm\\EquipmentRental.WinForm.csproj|c:\\users\\essa8\\onedrive\\\u0627\u0644\u0645\u0633\u062A\u0646\u062F\u0627\u062A\\desktop\\advproj\\advancedproj\\equipmentrental\\equipmentrental.winform\\equipmentrental.winform.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
@@ -277,7 +277,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -289,33 +289,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "EquipmentInformation.Designer.cs",
               "DocumentMoniker": "C:\\Users\\essa8\\OneDrive\\\u0627\u0644\u0645\u0633\u062A\u0646\u062F\u0627\u062A\\Desktop\\advproj\\AdvancedProj\\EquipmentRental\\EquipmentRental.WinForm\\EquipmentInformation.Designer.cs",
               "RelativeDocumentMoniker": "EquipmentRental.WinForm\\EquipmentInformation.Designer.cs",
-              "ToolTip": "C:\\Users\\essa8\\OneDrive\\\u0627\u0644\u0645\u0633\u062A\u0646\u062F\u0627\u062A\\Desktop\\advproj\\AdvancedProj\\EquipmentRental\\EquipmentRental.WinForm\\EquipmentInformation.Designer.cs*",
-              "RelativeToolTip": "EquipmentRental.WinForm\\EquipmentInformation.Designer.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKwAAAAFAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\essa8\\OneDrive\\\u0627\u0644\u0645\u0633\u062A\u0646\u062F\u0627\u062A\\Desktop\\advproj\\AdvancedProj\\EquipmentRental\\EquipmentRental.WinForm\\EquipmentInformation.Designer.cs",
+              "RelativeToolTip": "EquipmentRental.WinForm\\EquipmentInformation.Designer.cs",
+              "ViewState": "AgIAAJYAAAAAAAAAAAAowK0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-19T12:41:50.201Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "EquipmentInformation.cs",
               "DocumentMoniker": "C:\\Users\\essa8\\OneDrive\\\u0627\u0644\u0645\u0633\u062A\u0646\u062F\u0627\u062A\\Desktop\\advproj\\AdvancedProj\\EquipmentRental\\EquipmentRental.WinForm\\EquipmentInformation.cs",
               "RelativeDocumentMoniker": "EquipmentRental.WinForm\\EquipmentInformation.cs",
               "ToolTip": "C:\\Users\\essa8\\OneDrive\\\u0627\u0644\u0645\u0633\u062A\u0646\u062F\u0627\u062A\\Desktop\\advproj\\AdvancedProj\\EquipmentRental\\EquipmentRental.WinForm\\EquipmentInformation.cs",
               "RelativeToolTip": "EquipmentRental.WinForm\\EquipmentInformation.cs",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAIwEYAAABWAAAAAAAAAA==",
+              "ViewState": "AgIAAGcAAAAAAAAAAAAcwIEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-19T12:31:57.639Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "EquipmentInformation.cs [Design]",
               "DocumentMoniker": "C:\\Users\\essa8\\OneDrive\\\u0627\u0644\u0645\u0633\u062A\u0646\u062F\u0627\u062A\\Desktop\\advproj\\AdvancedProj\\EquipmentRental\\EquipmentRental.WinForm\\EquipmentInformation.cs",
               "RelativeDocumentMoniker": "EquipmentRental.WinForm\\EquipmentInformation.cs",
