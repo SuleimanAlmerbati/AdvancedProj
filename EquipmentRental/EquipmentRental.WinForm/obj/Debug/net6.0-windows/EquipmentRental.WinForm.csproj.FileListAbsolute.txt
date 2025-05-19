@@ -1,0 +1,11 @@
+C:\Users\essa8\OneDrive\المستندات\Desktop\advproj\AdvancedProj\EquipmentRental\EquipmentRental.WinForm\obj\Debug\net6.0-windows\EquipmentRental.WinForm.csproj.AssemblyReference.cache
+C:\Users\essa8\OneDrive\المستندات\Desktop\advproj\AdvancedProj\EquipmentRental\EquipmentRental.WinForm\obj\Debug\net6.0-windows\EquipmentRental.WinForm.EquipmentCheckin.resources
+C:\Users\essa8\OneDrive\المستندات\Desktop\advproj\AdvancedProj\EquipmentRental\EquipmentRental.WinForm\obj\Debug\net6.0-windows\EquipmentRental.WinForm.EquipmentInformation.resources
+C:\Users\essa8\OneDrive\المستندات\Desktop\advproj\AdvancedProj\EquipmentRental\EquipmentRental.WinForm\obj\Debug\net6.0-windows\EquipmentRental.WinForm.Form1.resources
+C:\Users\essa8\OneDrive\المستندات\Desktop\advproj\AdvancedProj\EquipmentRental\EquipmentRental.WinForm\obj\Debug\net6.0-windows\EquipmentRental.WinForm.RentalsDashboard.resources
+C:\Users\essa8\OneDrive\المستندات\Desktop\advproj\AdvancedProj\EquipmentRental\EquipmentRental.WinForm\obj\Debug\net6.0-windows\EquipmentRental.WinForm.csproj.GenerateResource.cache
+C:\Users\essa8\OneDrive\المستندات\Desktop\advproj\AdvancedProj\EquipmentRental\EquipmentRental.WinForm\obj\Debug\net6.0-windows\EquipmentRental.WinForm.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\essa8\OneDrive\المستندات\Desktop\advproj\AdvancedProj\EquipmentRental\EquipmentRental.WinForm\obj\Debug\net6.0-windows\EquipmentRental.WinForm.AssemblyInfoInputs.cache
+C:\Users\essa8\OneDrive\المستندات\Desktop\advproj\AdvancedProj\EquipmentRental\EquipmentRental.WinForm\obj\Debug\net6.0-windows\EquipmentRental.WinForm.AssemblyInfo.cs
+C:\Users\essa8\OneDrive\المستندات\Desktop\advproj\AdvancedProj\EquipmentRental\EquipmentRental.WinForm\obj\Debug\net6.0-windows\EquipmentRental.WinForm.csproj.CoreCompileInputs.cache
+C:\Users\essa8\OneDrive\المستندات\Desktop\advproj\AdvancedProj\EquipmentRental\EquipmentRental.WinForm\obj\Debug\net6.0-windows\EquipmentRental.WinForm.sourcelink.json

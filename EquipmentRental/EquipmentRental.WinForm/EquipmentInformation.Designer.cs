@@ -28,56 +28,147 @@
         /// </summary>
         private void InitializeComponent()
         {
-            SearchLabel = new Label();
-            Searchtextbox = new TextBox();
-            button1 = new Button();
+            components = new System.ComponentModel.Container();
+            cmbStatusFilter = new ComboBox();
+            txtSearch = new TextBox();
+            btnSearch = new Button();
+            btnEdit = new Button();
+            dgvEquipmentList = new DataGridView();
+            courseDBContextBindingSource = new BindingSource(components);
+            categoriesDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            equipmentDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            feedbacksDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            rentalRequestsDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            rentalTransactionsDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            returnRecordsDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)dgvEquipmentList).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)courseDBContextBindingSource).BeginInit();
             SuspendLayout();
             // 
-            // SearchLabel
+            // cmbStatusFilter
             // 
-            SearchLabel.AutoSize = true;
-            SearchLabel.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            SearchLabel.Location = new Point(36, 44);
-            SearchLabel.Name = "SearchLabel";
-            SearchLabel.Size = new Size(68, 25);
-            SearchLabel.TabIndex = 0;
-            SearchLabel.Text = "Search:";
+            cmbStatusFilter.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            cmbStatusFilter.FormattingEnabled = true;
+            cmbStatusFilter.Location = new Point(25, 32);
+            cmbStatusFilter.Name = "cmbStatusFilter";
+            cmbStatusFilter.Size = new Size(126, 29);
+            cmbStatusFilter.TabIndex = 0;
+            cmbStatusFilter.Text = "Filter by status";
             // 
-            // Searchtextbox
+            // txtSearch
             // 
-            Searchtextbox.Location = new Point(129, 47);
-            Searchtextbox.Name = "Searchtextbox";
-            Searchtextbox.Size = new Size(373, 23);
-            Searchtextbox.TabIndex = 1;
+            txtSearch.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtSearch.Location = new Point(184, 32);
+            txtSearch.Name = "txtSearch";
+            txtSearch.Size = new Size(307, 29);
+            txtSearch.TabIndex = 1;
+            txtSearch.Text = "Search...";
             // 
-            // button1
+            // btnSearch
             // 
-            button1.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.Location = new Point(528, 44);
-            button1.Name = "button1";
-            button1.Size = new Size(83, 34);
-            button1.TabIndex = 2;
-            button1.Text = "Search";
-            button1.UseVisualStyleBackColor = true;
+            btnSearch.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnSearch.Location = new Point(517, 28);
+            btnSearch.Name = "btnSearch";
+            btnSearch.Size = new Size(115, 34);
+            btnSearch.TabIndex = 2;
+            btnSearch.Text = "Search";
+            btnSearch.UseVisualStyleBackColor = true;
+            btnSearch.Click += button1_Click;
+            // 
+            // btnEdit
+            // 
+            btnEdit.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnEdit.Location = new Point(650, 28);
+            btnEdit.Name = "btnEdit";
+            btnEdit.Size = new Size(109, 33);
+            btnEdit.TabIndex = 3;
+            btnEdit.Text = "Edit";
+            btnEdit.UseVisualStyleBackColor = true;
+            // 
+            // dgvEquipmentList
+            // 
+            dgvEquipmentList.AutoGenerateColumns = false;
+            dgvEquipmentList.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvEquipmentList.Columns.AddRange(new DataGridViewColumn[] { categoriesDataGridViewTextBoxColumn, equipmentDataGridViewTextBoxColumn, feedbacksDataGridViewTextBoxColumn, rentalRequestsDataGridViewTextBoxColumn, rentalTransactionsDataGridViewTextBoxColumn, returnRecordsDataGridViewTextBoxColumn });
+            dgvEquipmentList.DataSource = courseDBContextBindingSource;
+            dgvEquipmentList.Location = new Point(69, 86);
+            dgvEquipmentList.Name = "dgvEquipmentList";
+            dgvEquipmentList.RowTemplate.Height = 25;
+            dgvEquipmentList.Size = new Size(645, 312);
+            dgvEquipmentList.TabIndex = 4;
+            // 
+            // courseDBContextBindingSource
+            // 
+            courseDBContextBindingSource.DataSource = typeof(EquipmentLibrary.Model.CourseDBContext);
+            // 
+            // categoriesDataGridViewTextBoxColumn
+            // 
+            categoriesDataGridViewTextBoxColumn.DataPropertyName = "Categories";
+            categoriesDataGridViewTextBoxColumn.HeaderText = "Categories";
+            categoriesDataGridViewTextBoxColumn.Name = "categoriesDataGridViewTextBoxColumn";
+            // 
+            // equipmentDataGridViewTextBoxColumn
+            // 
+            equipmentDataGridViewTextBoxColumn.DataPropertyName = "Equipment";
+            equipmentDataGridViewTextBoxColumn.HeaderText = "Equipment";
+            equipmentDataGridViewTextBoxColumn.Name = "equipmentDataGridViewTextBoxColumn";
+            // 
+            // feedbacksDataGridViewTextBoxColumn
+            // 
+            feedbacksDataGridViewTextBoxColumn.DataPropertyName = "Feedbacks";
+            feedbacksDataGridViewTextBoxColumn.HeaderText = "Feedbacks";
+            feedbacksDataGridViewTextBoxColumn.Name = "feedbacksDataGridViewTextBoxColumn";
+            // 
+            // rentalRequestsDataGridViewTextBoxColumn
+            // 
+            rentalRequestsDataGridViewTextBoxColumn.DataPropertyName = "RentalRequests";
+            rentalRequestsDataGridViewTextBoxColumn.HeaderText = "RentalRequests";
+            rentalRequestsDataGridViewTextBoxColumn.Name = "rentalRequestsDataGridViewTextBoxColumn";
+            // 
+            // rentalTransactionsDataGridViewTextBoxColumn
+            // 
+            rentalTransactionsDataGridViewTextBoxColumn.DataPropertyName = "RentalTransactions";
+            rentalTransactionsDataGridViewTextBoxColumn.HeaderText = "RentalTransactions";
+            rentalTransactionsDataGridViewTextBoxColumn.Name = "rentalTransactionsDataGridViewTextBoxColumn";
+            // 
+            // returnRecordsDataGridViewTextBoxColumn
+            // 
+            returnRecordsDataGridViewTextBoxColumn.DataPropertyName = "ReturnRecords";
+            returnRecordsDataGridViewTextBoxColumn.HeaderText = "ReturnRecords";
+            returnRecordsDataGridViewTextBoxColumn.Name = "returnRecordsDataGridViewTextBoxColumn";
             // 
             // EquipmentInformation
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(button1);
-            Controls.Add(Searchtextbox);
-            Controls.Add(SearchLabel);
+            Controls.Add(dgvEquipmentList);
+            Controls.Add(btnEdit);
+            Controls.Add(btnSearch);
+            Controls.Add(txtSearch);
+            Controls.Add(cmbStatusFilter);
             Name = "EquipmentInformation";
             Text = "EquipmentInformation";
+            Load += EquipmentInformation_Load;
+            ((System.ComponentModel.ISupportInitialize)dgvEquipmentList).EndInit();
+            ((System.ComponentModel.ISupportInitialize)courseDBContextBindingSource).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Label SearchLabel;
-        private TextBox Searchtextbox;
-        private Button button1;
+        private ComboBox cmbStatusFilter;
+        private TextBox txtSearch;
+        private Button btnSearch;
+        private Button btnEdit;
+        private DataGridView dgvEquipmentList;
+        private DataGridViewTextBoxColumn categoriesDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn equipmentDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn feedbacksDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn rentalRequestsDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn rentalTransactionsDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn returnRecordsDataGridViewTextBoxColumn;
+        private BindingSource courseDBContextBindingSource;
     }
 }

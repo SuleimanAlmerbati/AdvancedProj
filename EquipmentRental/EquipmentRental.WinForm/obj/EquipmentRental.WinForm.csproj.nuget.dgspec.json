@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\essa8\\OneDrive\\Desktop\\advproj\\AdvancedProj\\EquipmentRental\\EquipmentRental.WinForm\\EquipmentRental.WinForm.csproj": {}
+    "C:\\Users\\essa8\\OneDrive\\المستندات\\Desktop\\advproj\\AdvancedProj\\EquipmentRental\\EquipmentRental.WinForm\\EquipmentRental.WinForm.csproj": {}
   },
   "projects": {
-    "C:\\Users\\essa8\\OneDrive\\Desktop\\advproj\\AdvancedProj\\EquipmentRental\\EquipmentLibrary\\EquipmentLibrary.csproj": {
+    "C:\\Users\\essa8\\OneDrive\\المستندات\\Desktop\\advproj\\AdvancedProj\\EquipmentRental\\EquipmentLibrary\\EquipmentLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\essa8\\OneDrive\\Desktop\\advproj\\AdvancedProj\\EquipmentRental\\EquipmentLibrary\\EquipmentLibrary.csproj",
+        "projectUniqueName": "C:\\Users\\essa8\\OneDrive\\المستندات\\Desktop\\advproj\\AdvancedProj\\EquipmentRental\\EquipmentLibrary\\EquipmentLibrary.csproj",
         "projectName": "EquipmentLibrary",
-        "projectPath": "C:\\Users\\essa8\\OneDrive\\Desktop\\advproj\\AdvancedProj\\EquipmentRental\\EquipmentLibrary\\EquipmentLibrary.csproj",
+        "projectPath": "C:\\Users\\essa8\\OneDrive\\المستندات\\Desktop\\advproj\\AdvancedProj\\EquipmentRental\\EquipmentLibrary\\EquipmentLibrary.csproj",
         "packagesPath": "C:\\Users\\essa8\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\essa8\\OneDrive\\Desktop\\advproj\\AdvancedProj\\EquipmentRental\\EquipmentLibrary\\obj\\",
+        "outputPath": "C:\\Users\\essa8\\OneDrive\\المستندات\\Desktop\\advproj\\AdvancedProj\\EquipmentRental\\EquipmentLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -91,14 +91,14 @@
         }
       }
     },
-    "C:\\Users\\essa8\\OneDrive\\Desktop\\advproj\\AdvancedProj\\EquipmentRental\\EquipmentRental.WinForm\\EquipmentRental.WinForm.csproj": {
+    "C:\\Users\\essa8\\OneDrive\\المستندات\\Desktop\\advproj\\AdvancedProj\\EquipmentRental\\EquipmentRental.WinForm\\EquipmentRental.WinForm.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\essa8\\OneDrive\\Desktop\\advproj\\AdvancedProj\\EquipmentRental\\EquipmentRental.WinForm\\EquipmentRental.WinForm.csproj",
+        "projectUniqueName": "C:\\Users\\essa8\\OneDrive\\المستندات\\Desktop\\advproj\\AdvancedProj\\EquipmentRental\\EquipmentRental.WinForm\\EquipmentRental.WinForm.csproj",
         "projectName": "EquipmentRental.WinForm",
-        "projectPath": "C:\\Users\\essa8\\OneDrive\\Desktop\\advproj\\AdvancedProj\\EquipmentRental\\EquipmentRental.WinForm\\EquipmentRental.WinForm.csproj",
+        "projectPath": "C:\\Users\\essa8\\OneDrive\\المستندات\\Desktop\\advproj\\AdvancedProj\\EquipmentRental\\EquipmentRental.WinForm\\EquipmentRental.WinForm.csproj",
         "packagesPath": "C:\\Users\\essa8\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\essa8\\OneDrive\\Desktop\\advproj\\AdvancedProj\\EquipmentRental\\EquipmentRental.WinForm\\obj\\",
+        "outputPath": "C:\\Users\\essa8\\OneDrive\\المستندات\\Desktop\\advproj\\AdvancedProj\\EquipmentRental\\EquipmentRental.WinForm\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -119,8 +119,8 @@
           "net6.0-windows7.0": {
             "targetAlias": "net6.0-windows",
             "projectReferences": {
-              "C:\\Users\\essa8\\OneDrive\\Desktop\\advproj\\AdvancedProj\\EquipmentRental\\EquipmentLibrary\\EquipmentLibrary.csproj": {
-                "projectPath": "C:\\Users\\essa8\\OneDrive\\Desktop\\advproj\\AdvancedProj\\EquipmentRental\\EquipmentLibrary\\EquipmentLibrary.csproj"
+              "C:\\Users\\essa8\\OneDrive\\المستندات\\Desktop\\advproj\\AdvancedProj\\EquipmentRental\\EquipmentLibrary\\EquipmentLibrary.csproj": {
+                "projectPath": "C:\\Users\\essa8\\OneDrive\\المستندات\\Desktop\\advproj\\AdvancedProj\\EquipmentRental\\EquipmentLibrary\\EquipmentLibrary.csproj"
               }
             }
           }
